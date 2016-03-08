@@ -1,0 +1,10 @@
+Some useful commands
+
+Mongodb:
+mongod
+mongod --shutdown
+
+Process:
+fuser 8081/tcp
+fuser -k 8081/tcp
+ps aux
