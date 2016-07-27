@@ -5,7 +5,8 @@ sudo apt-get install -y mongodb-org
 $ mkdir data
 $ echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
 $ chmod a+x mongod
-$ mongod --shutdown
+$ ./mongod
+$ ./mongod --shutdown
 
 Process:
 fuser 8081/tcp
