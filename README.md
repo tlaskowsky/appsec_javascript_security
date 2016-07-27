@@ -7,7 +7,11 @@
     ----------------------------------------------------------------- 
 
 
-Welcome to your Node.js project on Cloud9 IDE!
+Welcome to your JavaScript Security Lab on Cloud9 IDE!
+
+Please do these two steps to complete the installation:
+1. npm install
+2. sudo apt-get install -y mongodb-org
 
 This chat example showcases how to use `socket.io` with a static `express` server.
 
