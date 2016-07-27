@@ -13,3 +13,8 @@ ps aux
 csurf library reference
 https://github.com/expressjs/csurf
 http://tornado.readthedocs.io/en/latest/guide/security.html#cross-site-request-forgery-protection
+
+github commands
+git add .
+git commit -m "First commit"
+git push
