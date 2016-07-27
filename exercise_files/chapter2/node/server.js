@@ -3,9 +3,11 @@ var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
 
-app.use(bodyParser());
+//app.use(bodyParser());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-//var port     = process.env.PORT || 8081; // set our port
+//var port     = process.env.PORT || 8080; // set our port
 var port		= 8081;
 
 var mongoose   = require('mongoose');
@@ -20,10 +22,8 @@ router.use(function(req, res, next) {
 	next();
 });
 
+//enter code from the book here
 
-router.get('/', function(req, res) {
-	res.sendfile('todos.html')
-});
 
 
 router.route('/todos')

@@ -6,7 +6,7 @@
     <!-- Bootstrap core CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles this template -->
     <style>
     #todo-form {
       display:none;
@@ -174,10 +174,11 @@
     function addTodo() {
       var data = {
         text: $('#todo_title').val(),
-        details:$('#todo_text').val()
+        details:$('#todo_text').val(),
       }
       $.post('/api/todos', data, function(result) {
         var item = todoTemplate(result.text, result.details, result._id);
+        //args._xsrf = getCookie("_xsrf");
         $('#todos').prepend(item);
         $("#todo-form").slideUp();
       })

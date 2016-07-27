@@ -8,9 +8,12 @@
   "dependencies": {
     "async": "~0.2.8",
     "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
     "cookie-session": "^2.0.0-alpha.1",
     "csrf": "^3.0.1",
+    "csurf": "^1.8.3",
     "express": "^4.13.4",
+    "express-session": "^1.13.0",
     "mongoose": "^4.4.6",
     "morgan": "^1.7.0",
     "socket.io": "~0.9.14"

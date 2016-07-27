@@ -1,14 +1,32 @@
 
 var express    = require('express');
-var bodyParser = require('body-parser');
+//var bodyParser = require('body-parser');
+
+var session    = require('express-session');
+var csrf       = require('csurf');
+
 var app        = express();
-var session    = require('cookie-session');
-var csrf    = require('csrf');
+
+// from http://scottksmith.com/blog/2014/09/04/simple-steps-to-secure-your-express-node-application/
+app.use(session({
+  secret: 'My super session secret',
+  cookie: {
+    httpOnly: true,
+    secure: true
+  }
+}));
 
 app.use(csrf());
-app.use(bodyParser());
 
-var port     = process.env.PORT || 8080; // set our port
+app.use(function(req, res, next) {
+  res.locals._csrf = req.csrfToken();
+  next();
+});
+
+//app.use(bodyParser());
+
+//var port     = process.env.PORT || 8081; // set our port
+var port		= 8081;
 
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/todos'); // connect to our database
@@ -24,7 +42,7 @@ router.use(function(req, res, next) {
 
 
 router.get('/', function(req, res) {
-	res.sendfile('todos.html')
+	res.sendfile('todos_secure.html')
 });
 
 

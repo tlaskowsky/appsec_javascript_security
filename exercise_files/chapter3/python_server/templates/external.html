@@ -90,7 +90,9 @@
         text: $('#todo_title').val(),
         details:$('#todo_text').val()
       }
-      $.post('http://localhost:8000/api/todos', data, function(result) {
+      //$.post('http://localhost:8000/api/todos', data, function(result) {
+      //$.post('http://localhost:8081/api/todos', data, function(result) {
+
         var item = todoTemplate(result.text, result.details);
         $('#todos').prepend(item);
         $("#todo-form").slideUp();

@@ -6,6 +6,7 @@ import pymongo
 from bson.objectid import ObjectId
 from tornado_cors import CorsMixin
 from tornado.options import define, options
+
 # added by tcl
 from pymongo import MongoClient
 
@@ -27,7 +28,7 @@ class Application(tornado.web.Application):
         self.db = client["todos"]
 
         settings = dict(
-            xsrf_cookies=True, # this will need to be changed to True
+            xsrf_cookies=False, # this will need to be changed to True
             debug=True,
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
             static_path=os.path.join(os.path.dirname(__file__), "static")
