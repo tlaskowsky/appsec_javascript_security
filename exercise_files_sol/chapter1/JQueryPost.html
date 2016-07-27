@@ -1,0 +1,22 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+$(function()
+{
+        //$.post("http://example.com/endpoint", function(data)
+        $.post("data", function(data)
+        {
+                alert("success");
+        })
+            .done(function(){
+                alert("second success");
+            })
+            .fail(function(){
+                alert("error");
+            })
+            .always(function(){
+                alert("finished");
+            });
+});
+</script>

@@ -1,0 +1,23 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+$(function()
+{
+        //$.get("http://example.com/data", function()
+        $.get("data", function()
+
+        {
+                alert("success");
+        })
+            .done(function(){
+                alert("second success");
+            })
+            .fail(function(){
+                alert("error");
+            })
+            .always(function(){
+                alert("finished");
+            });
+});
+</script>
