@@ -13,8 +13,8 @@ app.use(csrf());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-//var port     = process.env.PORT || 8080; // set our port
-var port		= 8081;
+var port     = process.env.PORT || 8080; // set our port
+//var port		= 8081;
 
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/todos'); // connect to our database
