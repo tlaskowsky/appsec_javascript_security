@@ -24,6 +24,7 @@ CSRF External Test
 
 Some useful commands
 
+-----
 Mongodb:
 sudo apt-get install -y mongodb-org
 $ mkdir data
@@ -32,24 +33,35 @@ $ chmod a+x mongod
 $ ./mongod
 $ ./mongod --shutdown
 
+Mongodb commands:
+mongo
+show dbs
+use todos
+show collections
+db.todos.find()
+
+-----
 Process:
 fuser 8081/tcp
 fuser -k 8081/tcp
 ps aux
 
-
+-----
 csurf library reference
 https://github.com/expressjs/csurf
 http://tornado.readthedocs.io/en/latest/guide/security.html#cross-site-request-forgery-protection
 
+-----
 owasp esapi library install
 npm install node-esapi
 
+-----
 github commands
 git add .
 git commit -m "First commit"
 git push
 
+-----
 npm commands
 npm init
 npm update
