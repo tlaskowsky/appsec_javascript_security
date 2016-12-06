@@ -1,3 +1,27 @@
+Todo App Commands
+1. Start mongodb
+    In a new terminal, type below:
+    ./mongod
+2. Start Todo App
+    go to exercise_files_sol/chapter2/node
+    select server.js
+    run server.js
+3. Test Todo App
+    open https://(your path here):8081/api
+
+CSRF External Test
+1. Start External Todo Interface
+    go to exercise_files_sol/chapters/external
+    select external_node.html
+    modify the submit URL to https://(your partner's Todo App url):8081/api
+    run external_node.html
+2. Test CSRF
+    
+
+
+
+
+
 Some useful commands
 
 Mongodb:

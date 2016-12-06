@@ -8,9 +8,9 @@ var app        = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var port     = process.env.PORT || 8080; // set our port
+//var port     = process.env.PORT || 8080; // set our port
 //adjusted for c9.io environment
-//var port		= 8081;
+var port		= 8081;
 
 var mongoose   = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1/todos'); // connect to our database
