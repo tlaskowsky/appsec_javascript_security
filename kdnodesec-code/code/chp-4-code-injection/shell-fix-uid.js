@@ -59,6 +59,8 @@ execFile('/usr/bin/id', ['-u', 'nobody'], function (err, stdout, stderr) {
 
     // Start server
     console.log('Nobody is ' + opts.uid);
-    console.log('Listening on 3000');
-    app.listen(3000);
+    //console.log('Listening on 3000');
+    //app.listen(3000);
+    console.log('Listening on 8080');
+    app.listen(8080);
 });

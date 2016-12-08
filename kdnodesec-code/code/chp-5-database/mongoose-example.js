@@ -10,15 +10,19 @@
 
 var express = require('express');
 var mongoose = require('mongoose');
+
+/* modified for c9.io exercise
 var args = require('minimist')(process.argv);
 
 if(!args.d) {
     console.log('This example requires the -d (mongoose db) command line variable');
     process.exit();
 }
+*/
 
 // Connect to mongoose db
-mongoose.connect(args.d);
+//mongoose.connect(args.d);
+mongoose.connect('mongodb://127.0.0.1/itest');
 mongoose.connection.on('error', function (err) {
     console.error('connection error:' + err);
     process.exit();
@@ -61,6 +65,8 @@ User.create([
         console.error(err);
         process.exit(1);
     }
-    console.log('Listening');
-    app.listen(3000);
+    //console.log('Listening');
+    //app.listen(3000);
+    console.log('Listening to port 8080');
+    app.listen(8080);
 });

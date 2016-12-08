@@ -14,12 +14,14 @@ var app = express();
 var csp = require('helmet-csp');
 app.use(csp({
     // Specify directives as normal
-    defaultSrc: ["'self'", 'default.com'],
-    scriptSrc: ["'self'", "'unsafe-inline'"],
-    styleSrc: ['style.com'],
-    imgSrc: ['img.com', 'data:'],
-    sandbox: ['allow-forms', 'allow-scripts'],
-    reportUri: '/report-violation',
+    directives: {
+        defaultSrc: ["'self'", 'default.com'],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ['style.com'],
+        imgSrc: ['img.com', 'data:'],
+        sandbox: ['allow-forms', 'allow-scripts'],
+        reportUri: '/report-violation',
+    },
 
     // Set to an empty array to allow nothing through
     objectSrc: [],
@@ -42,4 +44,7 @@ app.get('/', function (req, res, next) {
     res.send('ok');
 });
 
-app.listen(3000);
+//app.listen(3000);
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!')
+})

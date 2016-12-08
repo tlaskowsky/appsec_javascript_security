@@ -14,11 +14,16 @@ var app = express();
 var csp = require('helmet-csp');
 
 app.use(csp({
-    defaultSrc: ["'self'"]
+    directives: {
+        defaultSrc: ["'self'"]
+    }
 }));
 
 app.get('/', function (req, res, next) {
     res.send('ok');
 });
 
-app.listen(3000);
+//app.listen(3000);
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!')
+})

@@ -40,7 +40,23 @@ use todos
 show collections
 db.todos.find()
 
------
+------
+MySQL:
+# start MySQL. Will create an empty database on first start
+$ mysql-ctl start
+
+# stop MySQL
+$ mysql-ctl stop
+
+# run the MySQL interactive shell
+$ mysql-ctl cli
+mysql> use c9
+mysql> source createtable.sql
+mysql> show tables;
+
+ref: https://community.c9.io/t/setting-up-mysql/1718
+
+-------
 Process:
 fuser 8081/tcp
 fuser -k 8081/tcp
