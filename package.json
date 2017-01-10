@@ -1,15 +1,15 @@
 {
   "name": "javasecurity-lab",
   "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "description": "Application security lab",
   "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tlaskowsky/tlaskowsky.git"
   },
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "author": "credosec <info@credosec.com>",
   "dependencies": {
-    "async": "~0.2.8",
+    "async": "~2.1.4",
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.1",
     "cookie-session": "^2.0.0-alpha.1",
@@ -17,9 +17,13 @@
     "csurf": "^1.8.3",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
-    "mongoose": "^4.4.6",
+    "mongoose": "^4.7.2",
     "morgan": "^1.7.0",
-    "socket.io": "~0.9.14"
+    "mysql": "*",
+    "minimist": "*",
+    "node-esapi": "*",
+    "helmet-csp": "*",
+    "socket.io": "~1.7.1"
   },
   "scripts": {
     "start": "node server.js"

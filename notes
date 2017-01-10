@@ -1,4 +1,33 @@
+Complete lab setup
+
+-----
+npm commands
+-----
+npm init
+npm update
+npm install
+
+-----
+mongodb
+-----
+sudo apt-get install -y mongodb-org
+
+-----
+MySQL
+-----
+# start MySQL. Will create an empty database on first start
+$ mysql-ctl start
+
+# run the MySQL interactive shell after changing directory to where the source file is
+$ mysql-ctl cli
+mysql> use c9
+mysql> source createtable.sql
+mysql> show tables;
+
+
+-----
 Todo App Commands
+-----
 1. Start mongodb
     In a new terminal, type below:
     ./mongod
@@ -11,7 +40,7 @@ Todo App Commands
 
 CSRF External Test
 1. Start External Todo Interface
-    go to exercise_files_sol/chapters/external
+    go to exercise_files_sol/chapter2/external
     select external_node.html
     modify the submit URL to https://(your partner's Todo App url):8081/api
     run external_node.html
@@ -77,8 +106,4 @@ git add .
 git commit -m "First commit"
 git push
 
------
-npm commands
-npm init
-npm update
-npm install
+
