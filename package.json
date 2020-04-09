@@ -17,7 +17,7 @@
     "csurf": "^1.8.3",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
-    "mongoose": "^4.7.2",
+    "mongoose": "^5.7.5",
     "morgan": "^1.7.0",
     "mysql": "*",
     "minimist": "*",
