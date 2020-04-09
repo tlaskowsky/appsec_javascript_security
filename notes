@@ -10,31 +10,46 @@ npm install
 -----
 mongodb - used for nosql and csrf exercises
 -----
-sudo apt-get install -y mongodb-org
+sudo apt-get update
+sudo apt-get install -y mongodb
 
 -----
 MySQL
 -----
 # start MySQL. Will create an empty database on first start
-$ mysql-ctl start
+$ sudo systemctl start mysql
 
 # run the MySQL interactive shell from the directory where createtable.sql file is located
-$ mysql-ctl cli
+$ sudo mysql
+mysql> create database c9;
 mysql> use c9
 mysql> source createtable.sql
 mysql> show tables;
+
+mysql> create user c9user;
+mysql> grant all privileges on *.* to 'c9user'@'%';
+mysql> flush privileges;
 
 
 -----
 Todo App Commands
 -----
+0. Setup data directory
+    In a terminal, type below
+    sudo mkdir -p /data/db
+    
 1. Start mongodb
     In a new terminal, type below:
     ./mongod
+    
+    if you get an error, check existing process by
+    sudo lsof -iTCP -sTCP:LISTEN -n -P
+    
 2. Start Todo App
     go to exercise_files_sol/chapter2/node
     select server.js
     run server.js
+    
 3. Test Todo App
     open https://(your path here):8081/api
 
@@ -55,12 +70,13 @@ Some useful commands
 
 -----
 Mongodb:
-sudo apt-get install -y mongodb-org
+sudo apt-get update
+sudo apt-get install -y mongodb
 $ mkdir data
 $ echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
 $ chmod a+x mongod
-$ ./mongod
-$ ./mongod --shutdown
+$ mongod
+$ mongod --shutdown
 
 Mongodb commands:
 mongo
