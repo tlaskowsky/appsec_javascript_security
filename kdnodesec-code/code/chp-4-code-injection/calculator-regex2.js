@@ -36,7 +36,7 @@ app.post('/calc', function (req, res) {
     var result;
     // Surround with try-catch in case still invalid formula.
     try {
-        eval('result = ' + formula);
+        eval('result = ' + cleanFormula);
     } catch(e) {
         res.status(400).send('Invalid input');
         return;

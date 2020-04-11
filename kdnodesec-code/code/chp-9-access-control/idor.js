@@ -124,4 +124,4 @@ app.get('/settings/:id', easySession.isLoggedIn(), function (req, res) {
     res.json(db[req.params.id]);
 });
 
-app.listen(3000);
+app.listen(8080);

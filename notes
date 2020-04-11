@@ -29,6 +29,12 @@ mysql> show tables;
 mysql> create user c9user;
 mysql> grant all privileges on *.* to 'c9user'@'%';
 mysql> flush privileges;
+mysql> quit
+
+
+# install easy-session module
+npm install easy-session
+
 
 
 -----
