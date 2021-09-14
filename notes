@@ -10,8 +10,10 @@ npm install
 -----
 mongodb - used for nosql and csrf exercises
 -----
-sudo apt-get update
-sudo apt-get install -y mongodb
+## sudo apt-get update
+## sudo apt-get install -y mongodb
+## sudo npm install mongodb@3.1
+sudo npm install mongodb
 
 -----
 MySQL
@@ -34,6 +36,23 @@ mysql> quit
 
 # install easy-session module
 npm install easy-session
+
+
+
+-------
+MySQL2 - https://www.devopshint.com/install-mysql-5-7-on-amazon-linux-2/
+https://teratail.com/questions/322066
+-------
+sudo yum update
+sudo wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+sudo yum localinstall mysql57-community-release-el7-11.noarch.rpm
+sudo yum remove mariadb-config
+sudo yum install mysql-community-server
+sudo systemctl start mysqld.service
+sudo systemctl status mysqld.service
+sudo grep 'temporary password' /var/log/mysqld.log
+mysql_secure_installation
+mysql -u root -p
 
 
 
